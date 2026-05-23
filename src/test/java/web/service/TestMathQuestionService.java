@@ -46,6 +46,19 @@ public class TestMathQuestionService {
 	public void	testNegativeInput2AddSuccess() {
 		Assert.assertEquals(-1, MathQuestionService.q1Addition("1", "-2"), 0);
 	}	
+	@Test
+	public void	testLargeInput1AddSuccess() {
+		Assert.assertEquals(1013121089, MathQuestionService.q1Addition("125465774", "887655315"), 0);
+	}	
+	@Test
+	public void	testZeroInputAddSuccess() {
+		Assert.assertEquals(2, MathQuestionService.q1Addition("0", "2"), 0);
+	}	
+	@Test
+	public void	testDecInputAddSuccess() {
+		Assert.assertEquals(2.6, MathQuestionService.q1Addition("0.6", "2"), 0);
+	}	
+	
 	
 	
 	// subtraction tests
@@ -85,6 +98,18 @@ public class TestMathQuestionService {
 	@Test
 	public void	testNegativeInput2SubSuccess() {
 		Assert.assertEquals(3, MathQuestionService.q2Subtraction("1", "-2"), 0);
+	}	
+	@Test
+	public void	testLargeInputSubSuccess() {
+		Assert.assertEquals(762189541.0, MathQuestionService.q2Subtraction("887655315", "125465774"), 0);
+	}	
+	@Test
+	public void	testZeroInputSubSuccess() {
+		Assert.assertEquals(2, MathQuestionService.q2Subtraction("2", "0"), 0);
+	}	
+	@Test
+	public void	testDecInputSubSuccess() {
+		Assert.assertEquals(1.4, MathQuestionService.q1Addition("2", "0.6"), 0);
 	}	
 	
 	
@@ -130,4 +155,16 @@ public class TestMathQuestionService {
 	public void	testDoubleNegativeInputMultSuccess() {
 		Assert.assertEquals(2, MathQuestionService.q3Multiplication("-1", "-2"), 0);
 	}
+	@Test
+	public void	testLargeInputMultSuccess() {
+		Assert.assertEquals(111370361141688810.0, MathQuestionService.q3Multiplication("887655315", "125465774"), 0);
+	}	
+	@Test
+	public void	testZeroInputMultSuccess() {
+		Assert.assertEquals(0, MathQuestionService.q3Multiplication("2", "0"), 0);
+	}
+	@Test
+	public void	testDecInputMultSuccess() {
+		Assert.assertEquals(4.5, MathQuestionService.q1Addition("1.5", "3"), 0);
+	}	
 }
